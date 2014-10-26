@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="og3-5c-XAP">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="4xB-Zx-sDw">
+            <objects>
+                <viewController id="og3-5c-XAP" customClass="SplashScreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ApI-TI-phm"/>
+                        <viewControllerLayoutGuide type="bottom" id="pGN-RM-1Li"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="18u-Go-E1x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="330" affinity="minX"/>
+                        </userGuides>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="splash1-3" translatesAutoresizingMaskIntoConstraints="NO" id="iUZ-Jl-j1Z">
+                                <rect key="frame" x="-6" y="0.0" width="326" height="600"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Highscore: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dD8-U9-LGA">
+                                <rect key="frame" x="16" y="0.0" width="197" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="dD8-U9-LGA" firstAttribute="leading" secondItem="18u-Go-E1x" secondAttribute="leading" constant="13" id="70u-YC-fwv"/>
+                            <constraint firstItem="iUZ-Jl-j1Z" firstAttribute="top" secondItem="18u-Go-E1x" secondAttribute="top" id="9x1-c7-wfw"/>
+                            <constraint firstItem="ApI-TI-phm" firstAttribute="top" secondItem="dD8-U9-LGA" secondAttribute="bottom" constant="-40" id="O7Q-JV-gLV"/>
+                            <constraint firstItem="iUZ-Jl-j1Z" firstAttribute="leading" secondItem="18u-Go-E1x" secondAttribute="leading" id="Zfg-OZ-lQx"/>
+                            <constraint firstAttribute="trailing" secondItem="iUZ-Jl-j1Z" secondAttribute="trailing" constant="-6" id="oiM-mX-Gmg"/>
+                            <constraint firstAttribute="bottom" secondItem="iUZ-Jl-j1Z" secondAttribute="bottom" constant="-6" id="yGm-Y5-ykl"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hCR-b7-taG" appends="YES" id="hUQ-ft-9so"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="scoreLabel" destination="dD8-U9-LGA" id="QkK-Vl-Eq4"/>
+                        <segue destination="BV1-FR-VrT" kind="modal" identifier="show-game" modalTransitionStyle="crossDissolve" id="CA2-6v-gze"/>
+                    </connections>
+                </viewController>
+                <tapGestureRecognizer id="hCR-b7-taG">
+                    <connections>
+                        <action selector="viewTapped:" destination="og3-5c-XAP" id="uWA-Zh-nLI"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scB-iX-CtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-585" y="120"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="maK-i9-Uhn"/>
+                        <viewControllerLayoutGuide type="bottom" id="khH-OB-KpY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J11-Nt-l4R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash1-3" width="2048" height="1536"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
