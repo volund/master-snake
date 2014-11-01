@@ -30,6 +30,12 @@
     int score = [[NSUserDefaults standardUserDefaults] integerForKey:@"com.snake.highscore"];
     NSString *score_str = [NSString stringWithFormat:@"Best score: %d", score];
     self.scoreLabel.text = score_str;
+    self.versionLabel.text = [self versionString];
+}
+
+- (NSString *)versionString {
+    NSString *ver = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    return [@"v" stringByAppendingString:ver];
 }
 /*
 #pragma mark - Navigation

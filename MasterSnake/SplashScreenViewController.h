@@ -11,4 +11,6 @@
 @interface SplashScreenViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
+
 @end

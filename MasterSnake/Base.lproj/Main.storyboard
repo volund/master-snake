@@ -29,6 +29,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="version" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01G-yb-yDh">
+                                <rect key="frame" x="10" y="449" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -36,7 +42,9 @@
                             <constraint firstItem="dD8-U9-LGA" firstAttribute="leading" secondItem="18u-Go-E1x" secondAttribute="leading" constant="13" id="70u-YC-fwv"/>
                             <constraint firstItem="iUZ-Jl-j1Z" firstAttribute="top" secondItem="18u-Go-E1x" secondAttribute="top" id="9x1-c7-wfw"/>
                             <constraint firstItem="ApI-TI-phm" firstAttribute="top" secondItem="dD8-U9-LGA" secondAttribute="bottom" constant="-40" id="O7Q-JV-gLV"/>
+                            <constraint firstAttribute="bottom" secondItem="01G-yb-yDh" secondAttribute="bottom" constant="10" id="TYg-Ry-O4a"/>
                             <constraint firstItem="iUZ-Jl-j1Z" firstAttribute="leading" secondItem="18u-Go-E1x" secondAttribute="leading" id="Zfg-OZ-lQx"/>
+                            <constraint firstItem="01G-yb-yDh" firstAttribute="leading" secondItem="18u-Go-E1x" secondAttribute="leading" constant="10" id="dkR-eJ-CSq"/>
                             <constraint firstAttribute="trailing" secondItem="iUZ-Jl-j1Z" secondAttribute="trailing" constant="-6" id="oiM-mX-Gmg"/>
                             <constraint firstAttribute="bottom" secondItem="iUZ-Jl-j1Z" secondAttribute="bottom" constant="-6" id="yGm-Y5-ykl"/>
                         </constraints>
@@ -48,6 +56,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="scoreLabel" destination="dD8-U9-LGA" id="QkK-Vl-Eq4"/>
+                        <outlet property="versionLabel" destination="01G-yb-yDh" id="Xww-NK-Z1y"/>
                         <segue destination="BV1-FR-VrT" kind="modal" identifier="show-game" modalTransitionStyle="crossDissolve" id="CA2-6v-gze"/>
                     </connections>
                 </viewController>
